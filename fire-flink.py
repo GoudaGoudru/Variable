@@ -18,8 +18,8 @@ def login(token):
         "Content-Type": "application/json"
     }
     head["Authorization"] = "Bearer " + token
-    suiteid = 'SUITE1005'
-    baseUrl = 'https://backend.fireflink.com'
+    suiteid = 'SUITE1002'
+    baseUrl = 'https://preprod.fireflink.com'
 
     run = s.get(baseUrl + ':8102/optimize/v1/suite/runSetting/run/' + suiteid, headers=head)
     runout = json.loads(run.content)
